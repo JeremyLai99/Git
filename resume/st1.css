@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Mukta:wght@300&display=swap');
+/* 全域 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 電腦樣式 */
+
+header {
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 100px auto;
+}
+
+.logo {
+    height: 40px;
+    padding: 10px;
+    background-color: brown;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: none;
+}
+
+nav {
+    width: 30%;
+    background-color: blue;
+}
+
+nav ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ol li {
+    width: 200px;
+}
+
+ol li a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 40px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    background-color: #6FB7B7;
+}
+
+.about {
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    /* padding: 0 20px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.myphoto {
+    width: 40%;
+    height: 400px;
+    font-size: 20px;
+    background-color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    width: 50%;
+    height: 400px;
+    background-color: #cab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.title2 {
+    font-size: 36px;
+    display: flex;
+    justify-content: flex-start;
+    text-shadow: 5px 5px 10px gray;
+    margin-bottom: 50px;
+}
+
+.datenews {
+    border-bottom: 1px dashed black;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 50px;
+    color: #000000;
+}
+
+.date {
+    font-family: "Quicksand", sans-serif;
+    margin-right: 30px;
+    float: left;
+}
+
+.news {
+    font-family: "Noto Sans TC", sans-serif;
+    float: left;
+}
+
+.title3 {
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 5px 5px 10px gray;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    width: 80%;
+    max-width: 1500px;
+    margin: 100px auto;
+    gap: 10px;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.side-front img {
+    width: 100%;
+}
+
+.pic1 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.pic2 {
+    grid-area: 2 / 1 / 4 / 2;
+}
+
+.pic3 {
+    grid-area: 2 / 2 / 4 / 4;
+}
+
+/* 讓圖片填滿欄位 */
+.card:nth-child(5) img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.card:nth-child(7) img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.pos {
+    transform: translateY(-100px);
+}
+
+
+
+#contact {
+    background: linear-gradient(to bottom, #6a11cb 0%, #2575fc 50%, #39e5e5 100%);
+    height: 90vh;
+}
+
+.title4 {
+    font-size: 36px;
+    display: flex;
+    justify-content: flex-start;
+    text-shadow: 5px 5px 10px gray;
+    /* margin-bottom: 50px; */
+}
+
+#contact p {
+    color: white;
+    font-size: 20px;
+}
+
+.contact {
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.address {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    line-height: 1.5;
+    border: 1px solid black;
+}
+
+.address ol {
+    margin: 30px 0;
+}
+
+.address>ol>li {
+    list-style: none;
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.format {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    clear: both;
+}
+
+/* 平板樣式 */
+/* 手機樣式 */
