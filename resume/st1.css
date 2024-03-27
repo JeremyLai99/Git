@@ -238,7 +238,7 @@ ol li a {
     width: 50%;
     height: 100%;
     }
-.form{
+form{
     border: 1px solid black;
     width: 80%;
     height: 400px;
@@ -246,15 +246,16 @@ ol li a {
     border-radius: 10px;
     padding: 20px;
 }
-form>label{
+.form-group>label{
     color: white;
     font-size: 1.5rem;
 }
-form>input, textarea{
+.form-group>input, textarea{
     display: inline-block;
     font-size: 1.5rem;
     border-radius: 5px;
     background-color: rgb(208, 117, 72);
+    max-width: 400px;
 }
 
 footer {
