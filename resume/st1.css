@@ -204,7 +204,6 @@ ol li a {
 }
 
 .contact {
-    height: 800px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -238,10 +237,24 @@ ol li a {
 .format {
     width: 50%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    }
+.form{
     border: 1px solid black;
+    width: 80%;
+    height: 400px;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+form>label{
+    color: white;
+    font-size: 1.5rem;
+}
+form>input, textarea{
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background-color: rgb(208, 117, 72);
 }
 
 footer {
