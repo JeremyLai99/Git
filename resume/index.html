@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phote Gallery</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            width: 80%;
+            max-width: 1200px;
+            margin: 100px auto;
+        }
+
+        .card {
+            overflow: hidden;
+        }
+
+        .side-front img {
+            width: 100%;
+        }
+
+        .pic1 {
+            grid-area: 1 / 4 / 2 / 6;
+        }
+
+        .pic2 {
+            grid-area: 2 / 1 / 4 / 3;
+        }
+
+        .pic3 {
+            grid-area: 3 / 3 / 4 / 5;
+        }
+
+        /* 讓圖片填滿欄位 */
+        .card:nth-child(1) img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card:nth-child(6) img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .pos {
+            transform: translateY(-50px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="side-front">
+                <img src="imgs/japan.jpg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="side-front">
+                <img src="imgs/japan2.jpg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="side-front">
+                <img src="imgs/pancake.jpg" class="pos" alt="">
+            </div>
+        </div>
+        <div class="card pic1">
+            <div class="side-front">
+                <img src="imgs/japan3.jpg" class="pos" alt="">
+            </div>
+        </div>
+        <div class="card pic2">
+            <div class="side-front">
+                <img src="imgs/strawberry.jpg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="side-front">
+                <img src="imgs/people1.jpg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="side-front">
+                <img src="imgs/sea.jpg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="side-front">
+                <img src="imgs/photo3.jpg" alt="">
+            </div>
+        </div>
+        <div class="card pic3">
+            <div class="side-front">
+                <img src="imgs/japan1.jpg" class="pos" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="side-front">
+                <img src="imgs/people2.jpg" class="pos" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading載入動畫</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 200px;
+            height: 100px;
+            padding-top: 100px;
+            margin: 0 auto;
+
+        }
+
+        .bar {
+            width: 90px;
+            height: 10px;
+            margin: 10px auto;
+            border-radius: 50px;
+        }
+
+        .bar:nth-child(1) {
+            background-color: aqua;
+            animation: right 1s ease-in infinite alternate;
+        }
+
+        .bar:nth-child(2) {
+            background-color: rgb(171, 206, 46);
+            animation: left 1.1s ease-in infinite alternate;
+        }
+
+        .bar:nth-child(3) {
+            background-color: rgb(135, 115, 223);
+            animation: right 1.15s ease-in infinite alternate;
+        }
+
+        .bar:nth-child(4) {
+            background-color: rgb(108, 209, 130);
+            animation: right 1.2s ease-in infinite alternate;
+        }
+
+        .bar:nth-child(5) {
+            background-color: rgb(231, 171, 80);
+            animation: left 1.25s ease-in infinite alternate;
+        }
+
+        @keyframes right {
+            from {
+                transform: translateX(-15px);
+            }
+
+            to {
+                transform: translateX(15px);
+            }
+
+        }
+
+        @keyframes left {
+            from {
+                transform: translateX(15px);
+            }
+
+            to {
+                transform: translateX(-15px);
+            }
+
+        }
+
+        p {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            animation: fade 1.5s infinite alternate;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <p>Loading, pleaes wait~</p>
+    </div>
+
+</body>
+
+</html>
