@@ -30,41 +30,112 @@
         </div>
     </section>
 
-    <section class="info">
-        <div class="about">
-            <div class="myphoto">Photo</div>
-            <div class="description">Description</div>
-        </div>
-    </section>
-
-
-
-    <section>
+    <section id="info">
         <div class="container">
-            <div>
-                <h2 class="title2">工作經歷</h2>
-            </div>
-            <div class="datenews">
-                <div class="date">2022-Present</div>
-                <div class="news">Front-end Developer</div>
+            <div class="des">
+              <div class="myphoto">
+                <img src="imgs/ironman01.jpg" alt="">
+              </div>
+        
+              <div class="description">
+                <h2 class="title1">追求美感與效能的全端工程師</h2>
+                <div class="profile">
+                    <p>我叫Mandy Smith，我是一位全端工程師，擁有超過七年的撰寫網頁應用程式的經驗。我的程式熱情起源於大學時期，自那以後，我一直使用不同的程式語言和框架來撰寫強大、可擴展和易用的應用程式。我相信程式是一門藝術，我始終努力創建易於維護和理解的乾淨、優雅的程式碼。
+                    </p>
+                </div>
+                <div id="tab2" class="education">
+                    <h3>學歷</h3>
+                    <ol class="degree">
+                        <li>
+                            <h4>計算機科學學士學位</h4>
+                            <p>加州大學洛杉磯分校 | 2017 - 2021</p>
+                        </li>
+                        <li>
+                            <h4>軟件工程碩士學位</h4>
+                            <p>卡內基美隆大學 | 2021 - 至今</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="skills">
+                    <h3>技能</h3>
+                    <ol class="skills-list">
+                        <li>
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-bar">
+                                <span class="skill-level skill-html">90%</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-bar">
+                                <span class="skill-level skill-css">80%</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-bar">
+                                <span class="skill-level skill-js">70%</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">PHP</span>
+                            <span class="skill-bar">
+                                <span class="skill-level skill-php">60%</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">MySQL</span>
+                            <span class="skill-bar">
+                                <span class="skill-level skill-mysql">65%</span>
+                            </span>
+                        </li>
+                    </ol>
+                </div>
 
             </div>
-            <div class="datenews">
-                <div class="date">2018-2022</div>
-                <div class="news">Web Designer</div>
-
-            </div>
-            <div class="datenews">
-                <div class="date">2012-2018</div>
-                <div class="news">Full-stack Developer</div>
-
             </div>
         </div>
     </section>
 
-    <section>
-        <h2 class="title3">作品集</h2>
-        <div class="gallery">
+
+
+    <section id="history">
+        <div class="container">
+            <h2 class="title2">工作經歷</h2>
+            <ol class="work-experience">
+                    <li>
+                        <div class="period">2019 - Present</div>
+                        <div><img src="imgs/google.png" alt="" class="company-logo"></div>
+                        <div>Front-end Developer</div>
+                    </li>
+                    <li>
+                        <div class="period">2017 - 2019</div>
+                        <div><img src="imgs/apple.png" alt="" class="company-logo"></div>
+                        <div>Web Designer</div>
+                    </li>
+                    <li>
+                        <div class="period">2015 - 2017</div>
+                        <div><img src="imgs/amazon.png" alt="" class="company-logo"></div>
+                        <div>ull-stack Developer</div>
+                    </li>
+                    <li>
+                        <div class="period">2013 - 2015</div>
+                        <div><img src="imgs/microsoft.png" alt="" class="company-logo"></div>
+                        <div>UI/UX Designer</div>
+                    </li>
+                    <li>
+                        <div class="period">2011 - 2013</div>
+                        <div><img src="imgs/meta.png" alt="" class="company-logo"></div>
+                        <div>Back-end Developer</div>
+                    </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+          <h2 class="title3">作品集</h2>
+          <div class="gallery">
             <div class="card pic1">
                 <div class="side-front">
                     <img src="imgs/japan.jpg" class="pos" alt="">
@@ -115,13 +186,15 @@
                     <img src="imgs/photo3.jpg" alt="">
                 </div>
             </div>
+            </div>
         </div>
     </section>
+    
     <section id="contact">
         <div class="container">
             <div class="contact">
                 <div class="address">
-                    <h2 class="title4">Contact Us</h2>
+                    <h2 class="title3">Contact Us</h2>
                     <p>如有任何問題或疑問，請隨時聯絡我們。</p>
                     <ol>
                         <li><i class="fa-solid fa-location-crosshairs"></i> 台北市信義區信義路五段7號</li>
@@ -132,21 +205,25 @@
                 <div class="format">
                     <form action="#" method="post">
                         <div class="form-group">
-                            <label for="name">姓名: </label>
+                            <label for="name">姓名</label>
                             <input type="text" id="name" name="name">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email: </label>
+                            <label for="email">Email</label>
                             <input type="text" id="email" name="email">
                         </div>
                         <div class="form-group">
-                            <label for="phone">電話: </label>
+                            <label for="phone">電話</label>
                             <input type="text" id="phone" name="phone">
                         </div>
                         <div class="form-group">
-                            <label for="memo">訊息: </label>
+                            <label for="memo">訊息</label>
                             <textarea cols="40" rows="5" id="memo" name="memo"></textarea>
-                    </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn-submit">確定送出</button>
+                        </div>
+
                        </form>
                     
                 </div>

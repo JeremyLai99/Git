@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Mukta:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap')
 /* 全域 */
 
 * {
     margin: 0;
     padding: 0;
+    /* font-family: 'Mukta', sans-serif; */
     box-sizing: border-box;
 }
 
@@ -18,7 +19,7 @@ header {
 .container {
     width: 90%;
     max-width: 1500px;
-    margin: 100px auto;
+    margin: 0 auto;
 }
 
 .logo {
@@ -64,77 +65,115 @@ ol li a {
     justify-content: center;
 }
 
-.info {
-    background-color: #6FB7B7;
-}
+/* 主內容 */
 
-.about {
+.des {
     width: 80%;
-    height: 400px;
     margin: auto;
-    /* padding: 0 20px; */
     display: flex;
-    justify-content: space-around;
-    align-items: stretch;
+    }
+
+.myphoto img{
+box-shadow: -10px 10px 1px red;
 }
 
-.myphoto {
-    width: 40%;
-    height: 400px;
-    font-size: 20px;
-    background-color: #999;
+.myphoto {    
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .description {
-    width: 50%;
-    height: 400px;
-    background-color: #cab;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 80px;
+    }
+.title1 {
+        font-size: 32px;
+        display: flex;
+        justify-content: flex-start;
+        text-shadow: 3px 3px 3px #ababab;
+        }
+
+.profile>p{
+    letter-spacing: 2px;
+    line-height: 24px;
 }
 
+h3{
+    font-size: 1.5rem;
+}
+.degree{
+    margin: 0;
+    padding: 0;
+}
+.degree li{
+    list-style: none;
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+}
 
+h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.degree p{
+    padding-bottom: 15px;
+}
+
+.skills li{
+    list-style: none;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* 工作經歷 */
+
+#history{
+    background-color: #f5f5f5;
+    padding: 10px 0;
+}
 
 .title2 {
-    font-size: 36px;
+    font-size: 32px;
     display: flex;
     justify-content: flex-start;
-    text-shadow: 5px 5px 10px gray;
-    margin-bottom: 50px;
+    text-shadow: 3px 3px 3px #ababab;
+    margin: 40px;
 }
 
-.datenews {
-    border-bottom: 1px dashed black;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    font-size: 18px;
-    font-weight: 600;
-    font-style: normal;
-    line-height: 50px;
-    color: #000000;
+.work-experience{
+    list-style: none;
 }
 
-.date {
-    font-family: "Quicksand", sans-serif;
+.period{
+    width: 150px;
+    /* margin-right: 30px; */
+}
+.work-experience>li{
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    margin: 30px 0px;
+    padding: 0px 0px 20px 0px;
+    align-items: center;
+    align-content: baseline;
+    border-bottom: 1px solid #ddd;
+}
+.company-logo{
+    width: 50px;
+    height: 50px;
     margin-right: 30px;
-    float: left;
-}
+    border-radius: 100%;
+    }
 
-.news {
-    font-family: "Noto Sans TC", sans-serif;
-    float: left;
-}
+/* 作品集 */
 
 .title3 {
-    font-size: 36px;
+    font-size: 32px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
-    text-shadow: 5px 5px 10px gray;
+    text-shadow: 3px 3px 3px #ababab;
 }
 
 .gallery {
@@ -143,13 +182,13 @@ ol li a {
     grid-template-rows: repeat(3, 200px);
     width: 80%;
     max-width: 1500px;
-    margin: 100px auto;
+    margin: 0 auto;
     gap: 10px;
 }
 
 .card {
     overflow: hidden;
-}
+    }
 
 .side-front img {
     width: 100%;
@@ -168,10 +207,14 @@ ol li a {
 }
 
 /* 讓圖片填滿欄位 */
-.card:nth-child(5) img {
+.card:nth-child(1) img {
     height: 400px;
     object-fit: cover;
 }
+/* .card:nth-child(2) img {
+    height: 400px;
+    object-fit: cover;
+} */
 
 .card:nth-child(7) img {
     height: 200px;
@@ -182,25 +225,15 @@ ol li a {
     transform: translateY(-100px);
 }
 
-
+/* 聯絡我們 */
 
 #contact {
     background: linear-gradient(to bottom, #6a11cb 0%, #2575fc 50%, #39e5e5 100%);
-    height: 90vh;
-}
-
-.title4 {
-    font-size: 36px;
-    display: flex;
-    justify-content: flex-start;
-    text-shadow: 5px 5px 10px gray;
-    /* margin-bottom: 50px; */
 }
 
 #contact p {
     color: white;
     font-size: 20px;
-    margin-top: 20px;
 }
 
 .contact {
@@ -208,7 +241,7 @@ ol li a {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
+   
 }
 
 
@@ -219,43 +252,65 @@ ol li a {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    line-height: 1.5;
-    border: 1px solid black;
 }
 
-.address ol {
-    margin: 30px 0;
+.address>ol{
+    padding: 0;
 }
-
 .address>ol>li {
     list-style: none;
     color: white;
     font-size: 18px;
-    line-height: 1.5;
-}
+    }
 
 .format {
     width: 50%;
     height: 100%;
     }
 form{
-    border: 1px solid black;
-    width: 80%;
-    height: 400px;
+    /* border: 1px solid black; */
+    background-color: white;
+    /* width: 80%; */
+    height: 500px;
     margin: 20px;
     border-radius: 10px;
     padding: 20px;
+    align-items: center;
 }
 .form-group>label{
-    color: white;
-    font-size: 1.5rem;
+    color: black;
+    font-size: 1rem;
 }
+
 .form-group>input, textarea{
-    display: inline-block;
+    display: block;
     font-size: 1.5rem;
     border-radius: 5px;
-    background-color: rgb(208, 117, 72);
-    max-width: 400px;
+    background-color: rgb(219, 215, 213);
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+textarea{
+    margin-bottom: 25px;
+}
+/* .form-group>button{
+    position: absolute;
+    margin-bottom: 40px;
+} */
+.btn-submit{
+    background-image: linear-gradient(to left bottom, #6f6bd1, #4285e3, #009ceb, #00b0ea, #04c2e5, #00cee3, #01d9de, #35e3d6, #0aebc9, #0ff1b7, #39f79e, #5ffb81);;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    font-size: 17px;
+    font-family:'Times New Roman', Times, serif;
+}
+.btn-submit:hover{
+    background-image: linear-gradient(to left bottom, #6bd1a4, #7ad598, #8bd88c, #9fdb7f, #b4dc72, #c2db6b, #cfda65, #ddd860, #e5d55e, #edd25e, #f4ce5e, #fbcb5f);
 }
 
 footer {
