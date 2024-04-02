@@ -65,8 +65,102 @@ ol li a {
     justify-content: center;
 }
 
+/* 開頭動畫 */
+.hero {
+    background-color: white;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+.hero__title {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    z-index: 1;
+  }
+.hero_name{
+    color: black;
+    position: absolute;
+    top: 60%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    z-index: 1;
+    font-style: italic;
+  }
+.cube {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #003298;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -webkit-animation: cube 8s ease-in forwards infinite;
+            animation: cube 8s ease-in forwards infinite;
+  }
+  .cube:nth-child(2n) {
+    border-color: #0051f4;
+  }
+  .cube:nth-child(2) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    left: 25%;
+    top: 40%;
+  }
+  .cube:nth-child(3) {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    left: 75%;
+    top: 50%;
+  }
+  .cube:nth-child(4) {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    left: 90%;
+    top: 10%;
+  }
+  .cube:nth-child(5) {
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+    left: 10%;
+    top: 85%;
+  }
+  .cube:nth-child(6) {
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    left: 50%;
+    top: 10%;
+  }
+  
+  @-webkit-keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
 /* 主內容 */
-
 .des {
     width: 80%;
     margin: auto;
@@ -119,13 +213,126 @@ h4{
 .degree p{
     padding-bottom: 15px;
 }
-
+/* .skills-list{
+    padding: 0;
+} */
 .skills li{
     list-style: none;
     font-size: 1.3rem;
     margin-bottom: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: start;
+    align-content: baseline;
+    align-items: center;
+}
+.skill-name{
+    display: inline-block;
+    width: 80px;
+    margin-right: 30px;
+    font-size: 20px;
 }
 
+.skill-bar {
+    background-color: #ddd;
+    height: 15px;
+    border-radius: 20px;
+    display: inline-block;
+    width: 250px;
+    position: relative;
+    margin: 10px;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.skill-level {
+    background-color: #4CAF50;
+    height: 100%;
+    font-size: 1rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.skill-html {
+    animation: bar-html 2s ease-in-out;
+    background: linear-gradient(to right, #e9b059, #eb9a50, #eb844d, #e86c4f, #e35454);
+    width: 90%;
+}
+
+.skill-css {
+    animation: bar-css 2s ease-in-out;
+    background: linear-gradient(to right, #5992e9, #3da2ed, #2eb1ed, #3abee9, #54cae3);
+    width: 80%;
+}
+
+.skill-js {
+    animation: bar-js 2s ease-in-out;
+    background: linear-gradient(to right, #ecc022, #f1cf1e, #f4df1b, #f6ef1b, #f6ff1e);
+    width: 70%;
+}
+
+.skill-php {
+    animation: bar-php 2s ease-in-out;
+    background: linear-gradient(to right, #2c2b30, #3a3458, #493b82, #5a40ad, #7043d8);
+    width: 60%;
+}
+
+.skill-mysql {
+    animation: bar-mysql 2s ease-in-out;
+    background: linear-gradient(to right, #a6d3e7, #8fc7e3, #78bcdf, #5fb0db, #43a4d8);
+    width: 60%;
+}
+
+@keyframes bar-html {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes bar-css {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes bar-js {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes bar-php {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes bar-mysql {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 65%;
+    }
+}
 /* 工作經歷 */
 
 #history{
@@ -167,7 +374,16 @@ h4{
     }
 
 /* 作品集 */
+#gallery{
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+}
 
+#gallery .container{
+    height: 100%;
+    width: 100%;
+}
 .title3 {
     font-size: 32px;
     margin-bottom: 30px;
@@ -188,10 +404,14 @@ h4{
 
 .card {
     overflow: hidden;
+    height: 100%;
+    width: 100%;
     }
 
 .side-front img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .pic1 {
@@ -211,10 +431,15 @@ h4{
     height: 400px;
     object-fit: cover;
 }
-/* .card:nth-child(2) img {
+.card:nth-child(5) img {
     height: 400px;
     object-fit: cover;
-} */
+}
+
+.card:nth-child(6) img {
+    height: 400px;
+    object-fit: cover;
+}
 
 .card:nth-child(7) img {
     height: 200px;
