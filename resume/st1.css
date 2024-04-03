@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 /* 全域 */
 
 * {
@@ -11,9 +11,10 @@
 /* 電腦樣式 */
 
 header {
-    background-color: pink;
+    background-color: rgb(211, 227, 252);
     display: flex;
     justify-content: space-between;
+
 }
 
 .container {
@@ -25,7 +26,7 @@ header {
 .logo {
     height: 40px;
     padding: 10px;
-    background-color: brown;
+    background-color: rgb(224, 83, 83);
     color: white;
     display: flex;
     align-items: center;
@@ -38,7 +39,6 @@ header {
 
 nav {
     width: 30%;
-    background-color: blue;
 }
 
 nav ol {
@@ -47,11 +47,12 @@ nav ol {
     list-style: none;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 nav ol li {
-    width: 200px;
+    width: 250px;
+    padding: 0;
 }
 
 ol li a {
@@ -59,7 +60,6 @@ ol li a {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: 40px;
-    background-color: orange;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,8 +72,8 @@ ol li a {
     height: 500px;
     overflow: hidden;
     font-family: "Montserrat", sans-serif;
-  }
-  
+}
+
 .hero__title {
     color: black;
     position: absolute;
@@ -82,8 +82,9 @@ ol li a {
     transform: translate(-50%, -50%);
     font-size: 2rem;
     z-index: 1;
-  }
-.hero_name{
+}
+
+.hero_name {
     color: black;
     position: absolute;
     top: 60%;
@@ -92,7 +93,8 @@ ol li a {
     font-size: 1rem;
     z-index: 1;
     font-style: italic;
-  }
+}
+
 .cube {
     position: absolute;
     top: 80%;
@@ -103,75 +105,88 @@ ol li a {
     transform-origin: top left;
     transform: scale(0) rotate(0deg) translate(-50%, -50%);
     -webkit-animation: cube 8s ease-in forwards infinite;
-            animation: cube 8s ease-in forwards infinite;
-  }
-  .cube:nth-child(2n) {
+    animation: cube 8s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
     border-color: #0051f4;
-  }
-  .cube:nth-child(2) {
+}
+
+.cube:nth-child(2) {
     -webkit-animation-delay: 1s;
-            animation-delay: 1s;
+    animation-delay: 1s;
     left: 25%;
     top: 40%;
-  }
-  .cube:nth-child(3) {
+}
+
+.cube:nth-child(3) {
     -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    animation-delay: 2s;
     left: 75%;
     top: 50%;
-  }
-  .cube:nth-child(4) {
+}
+
+.cube:nth-child(4) {
     -webkit-animation-delay: 3s;
-            animation-delay: 3s;
+    animation-delay: 3s;
     left: 90%;
     top: 10%;
-  }
-  .cube:nth-child(5) {
+}
+
+.cube:nth-child(5) {
     -webkit-animation-delay: 4s;
-            animation-delay: 4s;
+    animation-delay: 4s;
     left: 10%;
     top: 85%;
-  }
-  .cube:nth-child(6) {
+}
+
+.cube:nth-child(6) {
     -webkit-animation-delay: 5s;
-            animation-delay: 5s;
+    animation-delay: 5s;
     left: 50%;
     top: 10%;
-  }
-  
-  @-webkit-keyframes cube {
+}
+
+@-webkit-keyframes cube {
     from {
-      transform: scale(0) rotate(0deg) translate(-50%, -50%);
-      opacity: 1;
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
     }
+
     to {
-      transform: scale(20) rotate(960deg) translate(-50%, -50%);
-      opacity: 0;
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
     }
-  }
-  
-  @keyframes cube {
+}
+
+@keyframes cube {
     from {
-      transform: scale(0) rotate(0deg) translate(-50%, -50%);
-      opacity: 1;
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
     }
+
     to {
-      transform: scale(20) rotate(960deg) translate(-50%, -50%);
-      opacity: 0;
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
     }
-  }
+}
+
 /* 主內容 */
+#info {
+    margin-bottom: 50px;
+}
+
 .des {
     width: 80%;
     margin: auto;
     display: flex;
-    }
-
-.myphoto img{
-box-shadow: -10px 10px 1px red;
 }
 
-.myphoto {    
+.myphoto img {
+    box-shadow: -10px 10px 1px red;
+}
+
+.myphoto {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,54 +194,62 @@ box-shadow: -10px 10px 1px red;
 
 .description {
     margin-left: 80px;
-    }
-.title1 {
-        font-size: 32px;
-        display: flex;
-        justify-content: flex-start;
-        text-shadow: 3px 3px 3px #ababab;
-        }
+}
 
-.profile>p{
+.title1 {
+    font-size: 32px;
+    display: flex;
+    justify-content: flex-start;
+    text-shadow: 3px 3px 3px #ababab;
+    margin-bottom: 20px;
+}
+
+.profile>p {
     letter-spacing: 2px;
     line-height: 24px;
+    margin-bottom: 20px;
 }
 
-h3{
+h3 {
     font-size: 1.5rem;
+    margin-bottom: 20px;
 }
-.degree{
+
+.degree {
     margin: 0;
     padding: 0;
 }
-.degree li{
+
+.degree li {
     list-style: none;
     background-color: rgb(247, 247, 247);
     border-radius: 5px;
 }
 
-h4{
+h4 {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.degree p{
-    padding-bottom: 15px;
+.degree p {
+    margin-bottom: 20px;
 }
+
 /* .skills-list{
     padding: 0;
 } */
-.skills li{
+.skills li {
     list-style: none;
     font-size: 1.3rem;
     margin-bottom: 10px;
     font-weight: bold;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-content: baseline;
     align-items: center;
 }
-.skill-name{
+
+.skill-name {
     display: inline-block;
     width: 80px;
     margin-right: 30px;
@@ -293,6 +316,7 @@ h4{
     from {
         width: 0%;
     }
+
     to {
         width: 90%;
     }
@@ -302,6 +326,7 @@ h4{
     from {
         width: 0%;
     }
+
     to {
         width: 80%;
     }
@@ -311,6 +336,7 @@ h4{
     from {
         width: 0%;
     }
+
     to {
         width: 70%;
     }
@@ -320,6 +346,7 @@ h4{
     from {
         width: 0%;
     }
+
     to {
         width: 60%;
     }
@@ -329,13 +356,15 @@ h4{
     from {
         width: 0%;
     }
+
     to {
         width: 65%;
     }
 }
+
 /* 工作經歷 */
 
-#history{
+#history {
     background-color: #f5f5f5;
     padding: 10px 0;
 }
@@ -348,15 +377,16 @@ h4{
     margin: 40px;
 }
 
-.work-experience{
+.work-experience {
     list-style: none;
 }
 
-.period{
+.period {
     width: 150px;
     /* margin-right: 30px; */
 }
-.work-experience>li{
+
+.work-experience>li {
     font-size: 20px;
     font-weight: bold;
     display: flex;
@@ -366,24 +396,26 @@ h4{
     align-content: baseline;
     border-bottom: 1px solid #ddd;
 }
-.company-logo{
+
+.company-logo {
     width: 50px;
     height: 50px;
     margin-right: 30px;
     border-radius: 100%;
-    }
+}
 
 /* 作品集 */
-#gallery{
+#gallery {
     height: 100%;
     width: 100%;
     padding: 50px;
 }
 
-#gallery .container{
+/* #gallery .container {
     height: 100%;
     width: 100%;
-}
+} */
+
 .title3 {
     font-size: 32px;
     margin-bottom: 30px;
@@ -399,14 +431,19 @@ h4{
     width: 80%;
     max-width: 1500px;
     margin: 0 auto;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 .card {
     overflow: hidden;
     height: 100%;
     width: 100%;
-    }
+    aspect-ratio: 4 /3;
+    padding: 10px 5px;
+
+}
+
+
 
 .side-front img {
     width: 100%;
@@ -431,6 +468,7 @@ h4{
     height: 400px;
     object-fit: cover;
 }
+
 .card:nth-child(5) img {
     height: 400px;
     object-fit: cover;
@@ -447,7 +485,7 @@ h4{
 }
 
 .pos {
-    transform: translateY(-100px);
+    /* transform: translateY(-100px); */
 }
 
 /* 聯絡我們 */
@@ -466,7 +504,7 @@ h4{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-   
+
 }
 
 
@@ -479,20 +517,22 @@ h4{
     align-items: start;
 }
 
-.address>ol{
+.address>ol {
     padding: 0;
 }
+
 .address>ol>li {
     list-style: none;
     color: white;
     font-size: 18px;
-    }
+}
 
 .format {
     width: 50%;
     height: 100%;
-    }
-form{
+}
+
+form {
     /* border: 1px solid black; */
     background-color: white;
     /* width: 80%; */
@@ -502,12 +542,14 @@ form{
     padding: 20px;
     align-items: center;
 }
-.form-group>label{
+
+.form-group>label {
     color: black;
     font-size: 1rem;
 }
 
-.form-group>input, textarea{
+.form-group>input,
+textarea {
     display: block;
     font-size: 1.5rem;
     border-radius: 5px;
@@ -516,15 +558,18 @@ form{
     margin-top: 5px;
     margin-bottom: 10px;
 }
-textarea{
+
+textarea {
     margin-bottom: 25px;
 }
+
 /* .form-group>button{
     position: absolute;
     margin-bottom: 40px;
 } */
-.btn-submit{
-    background-image: linear-gradient(to left bottom, #6f6bd1, #4285e3, #009ceb, #00b0ea, #04c2e5, #00cee3, #01d9de, #35e3d6, #0aebc9, #0ff1b7, #39f79e, #5ffb81);;
+.btn-submit {
+    background-image: linear-gradient(to left bottom, #6f6bd1, #4285e3, #009ceb, #00b0ea, #04c2e5, #00cee3, #01d9de, #35e3d6, #0aebc9, #0ff1b7, #39f79e, #5ffb81);
+    ;
     width: 100px;
     height: 40px;
     text-align: center;
@@ -532,9 +577,10 @@ textarea{
     border-radius: 10px;
     margin-bottom: 40px;
     font-size: 17px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
 }
-.btn-submit:hover{
+
+.btn-submit:hover {
     background-image: linear-gradient(to left bottom, #6bd1a4, #7ad598, #8bd88c, #9fdb7f, #b4dc72, #c2db6b, #cfda65, #ddd860, #e5d55e, #edd25e, #f4ce5e, #fbcb5f);
 }
 
