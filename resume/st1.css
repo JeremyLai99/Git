@@ -4,7 +4,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: 'Mukta', sans-serif; */
+    font-family: 'Mukta', sans-serif;
     box-sizing: border-box;
 }
 
@@ -14,7 +14,8 @@ header {
     background-color: rgb(211, 227, 252);
     display: flex;
     justify-content: space-between;
-
+    height: 60px;
+    align-items: center;
 }
 
 .container {
@@ -24,13 +25,15 @@ header {
 }
 
 .logo {
-    height: 40px;
+    height: 30px;
     padding: 10px;
     background-color: rgb(224, 83, 83);
+    text-align: center;
+}
+
+.logo>a{
+    text-decoration: none;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .menu {
@@ -47,7 +50,7 @@ nav ol {
     list-style: none;
     height: 100%;
     display: flex;
-    /* justify-content: space-between; */
+    align-items: center;
 }
 
 nav ol li {
@@ -63,7 +66,7 @@ ol li a {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    }
 
 /* 開頭動畫 */
 .hero {
@@ -175,6 +178,12 @@ ol li a {
 #info {
     margin-bottom: 50px;
 }
+#info .container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    
+}
 
 .des {
     width: 80%;
@@ -183,17 +192,22 @@ ol li a {
 }
 
 .myphoto img {
+    max-width: 100%;
     box-shadow: -10px 10px 1px red;
 }
 
 .myphoto {
-    display: flex;
+    height: auto;
+    width: 50%;
+    /* display: block;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .description {
-    margin-left: 80px;
+    width: 70%;
+    padding: 0 80px;
+    /* margin-left: 80px; */
 }
 
 .title1 {
@@ -201,7 +215,7 @@ ol li a {
     display: flex;
     justify-content: flex-start;
     text-shadow: 3px 3px 3px #ababab;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .profile>p {
@@ -253,7 +267,7 @@ h4 {
     display: inline-block;
     width: 80px;
     margin-right: 30px;
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 
 .skill-bar {
@@ -383,7 +397,7 @@ h4 {
 
 .period {
     width: 150px;
-    /* margin-right: 30px; */
+    margin-left: 45px;
 }
 
 .work-experience>li {
@@ -428,28 +442,35 @@ h4 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 200px);
-    width: 80%;
+    width: 90%;
     max-width: 1500px;
     margin: 0 auto;
-    /* gap: 10px; */
+    gap: 5px;
 }
 
 .card {
     overflow: hidden;
-    height: 100%;
-    width: 100%;
-    aspect-ratio: 4 /3;
-    padding: 10px 5px;
-
+    /* padding: 5px; */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
 }
 
-
-
-.side-front img {
+.side-front{
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+    /* top: 0;
+    left: 0; */
+    z-index: 3;
 }
+
+.side-front>img {
+    width: 100%;
+    height: 100%;
+    }
 
 .pic1 {
     grid-area: 1 / 1 / 2 / 3;
@@ -463,9 +484,35 @@ h4 {
     grid-area: 2 / 2 / 4 / 4;
 }
 
+.side-back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background: rgb(211, 227, 252);
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+}
+.card:hover .side-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .side-back {
+    transform: rotateY(0deg);
+}
+
+
+
 /* 讓圖片填滿欄位 */
-.card:nth-child(1) img {
-    height: 400px;
+.card:nth-child(2) img {
+    height: 200px;
+    object-fit: cover;
+}
+.card:nth-child(4) img {
+    height: 200px;
     object-fit: cover;
 }
 
@@ -478,8 +525,21 @@ h4 {
     height: 400px;
     object-fit: cover;
 }
-
 .card:nth-child(7) img {
+    height: 200px;
+    object-fit: cover;
+}
+.card:nth-child(8) img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:nth-child(9) img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:nth-child(10) img {
     height: 200px;
     object-fit: cover;
 }
@@ -502,9 +562,9 @@ h4 {
 .contact {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-bcetween;
     align-items: center;
-
+    padding-top: 80px;
 }
 
 
@@ -515,29 +575,32 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    padding-left: 80px;
 }
 
 .address>ol {
-    padding: 0;
+    padding-top: 40px;
 }
 
 .address>ol>li {
     list-style: none;
     color: white;
     font-size: 18px;
+    margin: 20px 0;
 }
 
 .format {
     width: 50%;
     height: 100%;
+    padding: 80px 0;
 }
 
 form {
-    /* border: 1px solid black; */
+    /* border: 1px solid red; */
     background-color: white;
-    /* width: 80%; */
-    height: 500px;
-    margin: 20px;
+    /* width: auto; */
+    height: auto;
+    padding: 20px;
     border-radius: 10px;
     padding: 20px;
     align-items: center;
@@ -595,5 +658,134 @@ footer {
     clear: both;
 }
 
-/* 平板樣式 */
+
 /* 手機樣式 */
+@media screen and (max-width: 767px) {
+    .menu {
+        display: block;
+        background: #0f339f;
+        padding: 5px;
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        
+    }
+
+    header {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .logo {
+        height: 30px;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+    
+    nav {
+        width: 100%;
+    }
+    nav ol {
+        flex-direction: column;
+        }
+    
+    nav ol li {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid red;
+    }
+    
+    
+   
+    .hero__title {
+        font-size: 1.5rem;
+    }
+    
+    .hero_name {
+        font-size: 0.75rem;
+    }
+
+
+    .des {
+        width: 80%;
+        margin: auto;
+        display: block;
+    }
+    .myphoto {
+        height: auto;
+        width: 100%;
+        /* display: block;
+        justify-content: center;
+        align-items: center; */
+    }
+    .description {
+        width: 100%;
+        padding: 10px 0;
+        /* margin-left: 80px; */
+    }
+
+    .skill-name{
+        width: 150px;
+        margin-right: 5px;
+    }
+
+
+
+    
+    .work-experience>li{
+        flex-wrap: wrap;
+        padding: 0px 0px 10px 0px;
+    }
+    .period {
+        width: 100%;
+        margin-left: 45px;
+    }
+    .company-logo {
+        margin-top: 10px;
+        margin-left: 45px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 200px);
+        width: 90%;
+        max-width: 1500px;
+        margin: 0 auto;
+        gap: 5px;
+    }
+    .pic1 {
+        grid-area: 1 / 1 / 1 / 1;
+    }
+    
+    .pic2 {
+        grid-area: 2 / 1 / 2 / 1;
+    }
+    
+    .pic3 {
+        grid-area: 2 / 2 / 2 / 2;
+    }
+  
+
+
+    .contact {
+        display: block;
+        /* flex-wrap: wrap;
+        justify-content: space-bcetween; */
+        align-items: center;
+    }
+
+    .address {
+        width: 100%;
+        height: 100%;
+        padding-left: 0px;
+    }
+    .format {
+        width: 100%;
+        height: 100%;
+        padding-top: 30px;
+        
+    }
+}
